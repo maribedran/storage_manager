@@ -9,18 +9,20 @@
       </div>
     </div>
   </nav>
-  <h1>Products is storage</h1>
+  <h1>Purchases made by date</h1>
   <table class="table table-striped">
     <thead class="thead-default">
       <th>Product</th>
       <th>Quantity</th>
-      <th>Average price</th>
+      <th>Price</th>
+      <th>Purchased</th>
     </thead>
     {% for product in object_list %}
       <tr>
-        <td width="80%" class="dl-horizontal">{{ product.name }}</td>
+        <td width="65%">{{ product.name }}</td>
         <td width="10%">{{ product.quantity }}</td>
         <td width="10%">${{ product.price }}</td>
+        <td width="15%">{{ product.datetime }}</td>
       </tr>
     {% endfor %}
   </table>

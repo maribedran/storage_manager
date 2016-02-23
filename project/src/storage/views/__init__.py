@@ -1,1 +1,2 @@
 from list_products_view import ListProductsView
+from list_purchases_view import ListPurchasesView
