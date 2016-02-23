@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-text" href="/">Storage Manager</a>
+      </div>
+    </div>
+  </nav>
+  <h1>Products is storage</h1>
+  <table class="table table-striped">
+    <thead class="thead-default">
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Average price</th>
+    </thead>
+    {% for product in object_list %}
+      <tr>
+        <td>{{ product.name }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>${{ product.price }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock content %}
