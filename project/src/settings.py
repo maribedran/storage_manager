@@ -41,6 +41,7 @@ DJANGO_APPS = (
 
 PROJ_APPS = (
     'src.storage',
+    'src.suply',
 )
 
 INSTALLED_APPS = DJANGO_APPS + PROJ_APPS
